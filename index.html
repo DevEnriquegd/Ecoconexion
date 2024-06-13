@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href='https://dl.dropboxusercontent.com/s/etuma8df6awlf4r/slim-before-after.min.css' rel='stylesheet'/>
-    <link rel="icon" href="../img/logo.webp">
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="icon" href="./img/logo.webp"">
+    <link rel="stylesheet" href="./src/style.css">
     <!-- Preconexión a Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,8 @@
      <!-- Navegación -->
      <nav class="bg-white px-5 py-3 shadow-md">
         <div class="mx-auto flex justify-between items-center"> <!--Le quité la clase container-->
-            <a href="../index.html" class="flex items-center">
-                <img src="../img/logo.webp" alt="EcoConexion Logo" class="h-10">
+            <a href="./index.html" class="flex items-center">
+                <img src="./img/logo.webp" alt="EcoConexion Logo" class="h-10">
             </a>
             <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-green-600 p-2 focus:outline-none">
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -27,8 +27,8 @@
                 </svg>
             </button>
             <div id="menu" class="hidden md:flex md:items-center md:space-x-4">
-                <a href="./situacionreal.html" class="text-green-600 hover:text-green-800">Situación Real</a>
-                <a href="./sobrenosotros.html" class="hover:text-gray-700">Sobre Nosotros</a>
+                <a href="./public/situacionreal.html" class="text-green-600 hover:text-green-800">Situación Real</a>
+                <a href="./public/sobrenosotros.html" class="hover:text-gray-700">Sobre Nosotros</a>
                 <div class="relative">
                     <button id="blog-menu-button" class="text-gray-700 hover:text-green-600 flex items-center">
                         Blog
@@ -37,8 +37,8 @@
                         </svg>
                     </button>
                     <div id="blog-menu" class="absolute hidden bg-white shadow-lg z-10 w64 mt-2 p-4 rounded-lg" style="width: 24rem;">
-                        <a href="./noticias.html" class="dropdown-item">
-                            <img src="../img/icon1.png" alt="Áreas Protegidas" class="dropdown-icon">
+                        <a href="./public/noticias.html" class="dropdown-item">
+                            <img src="./img/icon1.png" alt="Áreas Protegidas" class="dropdown-icon">
                             <div class="dropdown-text">
                                 <span class="dropdown-title">Áreas Protegidas</span>
                                 <span class="dropdown-description"><strong>Información acerca</strong> </span>
@@ -47,8 +47,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
                         </a>
-                        <a href="./noticias.html" class="dropdown-item">
-                            <img src="../img/icon2.png" alt="Reciclaje y Gestión de Residuos" class="dropdown-icon">
+                        <a href="./public/noticias.html" class="dropdown-item">
+                            <img src="./img/icon2.png" alt="Reciclaje y Gestión de Residuos" class="dropdown-icon">
                             <div class="dropdown-text">
                                 <span class="dropdown-title">Reciclaje y Gestión de Residuos</span>
                                 <span class="dropdown-description"><strong>Propuestas y Proyectos</strong></span>
@@ -57,8 +57,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
                         </a>
-                        <a href="./noticias.html" class="dropdown-item">
-                            <img src="../img/icon3.png" alt="Cuidado Ambiental" class="dropdown-icon">
+                        <a href="./public/noticias.html" class="dropdown-item">
+                            <img src="./img/icon3.png" alt="Cuidado Ambiental" class="dropdown-icon">
                             <div class="dropdown-text">
                                 <span class="dropdown-title">Cuidado Ambiental</span>
                                 <span class="dropdown-description"><strong>TODO</strong></span>
@@ -76,114 +76,170 @@
             </div>
         </div>
     </nav>
-    <!--Banner-->
-    <section class="py-10" style="background-color: #161E2E;">
-        <div class="container mx-auto flex flex-col md:flex-row items-center px-5">
-            <!-- Imagen del globo terráqueo -->
-            <div class="flex-1 flex justify-center md:justify-start mb-10 md:mb-0">
-                <img src="../img/bannerSN.png" alt="Imagen de un globo terráqueo" class="w-full h-auto rounded-lg">
-            </div>
-            <!-- Contenido de texto -->
-            <div class="flex-1 text-white md:ml-10">
-                <h2 class="text-4xl font-bold mb-4">SOMOS</h2>
-                <p class="text-lg">
-                    Somos EcoConexión, una plataforma comprometida en concientizar sobre la importancia del cuidado del medio ambiente, proporcionando información confiable y contribuyendo al desarrollo sostenible a través de la educación e inspiración tecnológica.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- Sección "EQUIPO" -->
-    <section class="py-10 bg-gray-50">
-        <div class="container mx-auto text-center mb-8">
-            <h2 class="text-4xl font-bold">EQUIPO</h2>
-        </div>
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-5">
-            <!-- Miembro del equipo -->
-            <div class="team-card p-6">
-                <img src="../img/buser.png" alt="González Díaz Juan" class="w-full h-48 object-cover team-img">
-                <div class="p-4">
-                    <h3 class="team-name">Gonzáles Díaz Juan</h3>
-                </div>
-            </div>
-            <!-- Miembro del equipo -->
-            <div class="team-card p-6">
-                <img src="../img/buser.png" alt="Gallardo Aguilar Aldo" class="w-full h-48 object-cover team-img">
-                <div class="p-4">
-                    <h3 class="team-name">Gallardo Aguilar Aldo</h3>
-                </div>
-            </div>
-            <!-- Miembro del equipo -->
-            <div class="team-card p-6">
-                <img src="../img/buser.png" alt="Moreno Fiallo Mathías" class="w-full h-48 object-cover team-img">
-                <div class="p-4">
-                    <h3 class="team-name">Moreno Fiallo Mathías</h3>
-                </div>
-            </div>
-            <!-- Miembro del equipo -->
-            <div class="team-card p-6">
-                <img src="../img/guser.png" alt="Moya Quispe María" class="w-full h-48 object-cover team-img">
-                <div class="p-4">
-                    <h3 class="team-name">Moya Quispe María</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Sección "Nuestra Historia" -->
-    <section class="py-10">
-        <div class="container mx-auto">
-            <div class="story-section">
-                <!-- Contenido de texto -->
-                <div class="story-text">
-                    <h2 class="text-4xl font-bold mb-4">EL INICIO DE NUESTRA MISIÓN</h2>
-                    <p class="text-lg leading-relaxed">
-                        Nuestra historia comenzó en la sala de un aula universitaria, donde cuatro estudiantes de ingeniería de sistemas compartían una visión común: hacer una diferencia en el mundo a través de la concienciación sobre el medio ambiente. Nos dimos cuenta de que la tecnología podía ser una herramienta poderosa para educar e inspirar a las personas a tomar medidas para proteger nuestro planeta. Así nació EcoConexión.
-                        Nos enfocamos en los Objetivos de Desarrollo Sostenible (ODS) 13 y 15, que tratan sobre la acción por el clima y la vida en la tierra, respectivamente. Estos objetivos resuenan profundamente con nosotros y guían nuestro trabajo diario. Estamos comprometidos con la mejora y el desarrollo continuo de nuestra plataforma, siempre buscando nuevas formas de educar, inspirar y movilizar a las personas para que cuiden nuestro medio ambiente. Nuestro viaje apenas comienza, y estamos emocionados de ver a dónde nos lleva.
-                    </p>
-                </div>
-                <!-- Imagen -->
-                <div class="story-image">
-                    <img src="../img/mundoSN.png" alt="EcoConexión" class="rounded-full">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Sección "VALORES" -->
+    <!-- Menú desplegable para dispositivos móviles -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="./public/situacionreal.html" class="block px-4 py-2 text-green-600 hover:text-green-800">Situación Real</a>
+        <a href="./public/sobrenosotros.html" class="block px-4 py-2 hover:text-gray-700">Sobre Nosotros</a>
+        <a href="./public/noticias.html" class="block px-4 py-2 hover:text-gray-700">Blog</a>
+        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors" type="button">
+            Contáctanos
+        </button>
+    </div>
+    <!-- Sección de Bienvenida -->
     <section class="bg-white py-10">
-        <div class="container mx-auto flex flex-wrap md:flex-nowrap items-center px-5">
-            <!-- Contenedor de Texto -->
-            <div class="w-full md:w-1/2 p-8">
-                <div class="container mx-auto text-center mb-8">
-                    <h2 class="text-4xl font-bold">VALORES</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Valor 1 -->
-                    <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b values-card">
-                        <h3 class="values-title">Compromiso con la sostenibilidad</h3>
-                        <p>Demostrar un compromiso firme con la protección del medio ambiente y la promoción de prácticas sostenibles en todas nuestras acciones y contenidos.</p>
-                    </div>
-                    <!-- Valor 2 -->
-                    <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b values-card">
-                        <h3 class="values-title">Transparencia y confiabilidad</h3>
-                        <p>Ser transparentes en nuestra información y procesos, brindando a nuestros usuarios confianza en la veracidad y precisión de nuestros datos y recursos.</p>
-                    </div>
-                    <!-- Valor 3 -->
-                    <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b values-card">
-                        <h3 class="values-title">Innovación tecnológica</h3>
-                        <p>Estar a la vanguardia de la tecnología para ofrecer soluciones creativas y accesibles que fomenten el aprendizaje y la participación en temas ambientales y de sostenibilidad.</p>
-                    </div>
-                    <!-- Valor 4 -->
-                    <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b values-card">
-                        <h3 class="values-title">Colaboración y comunidad</h3>
-                        <p>Fomentar la colaboración y el intercambio de conocimientos entre la comunidad, reconociendo que la acción colectiva es fundamental para abordar los desafíos ambientales de manera efectiva.</p>
-                    </div>
-                </div>
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-5"> <!--Le quité la clase container-->
+            <!-- Contenido de texto -->
+            <div class="flex-1 mb-10 md:mb-0 text-center md:text-left">
+                <h1 class="text-3xl md:text-5xl font-bold mb-3">EcoConexión</h1>
+                <p class="text-lg mb-5">Conectados por un futuro verde</p>
+                <!-- Botón para abrir el modal -->
+                <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="inline-block bg-green-500 text-white px-8 py-3 rounded hover:bg-green-600 transition-colors" type="button">
+                    Contáctanos
+                </button>
             </div>
-            <!-- Contenedor de Imagen -->
-            <div class="w-full md:w-1/2 p-8">
-                <img src="../img/cSn.png" alt="Imagen Valores" class="w-full h-full object-cover rounded-lg">
+            <!-- Imagen del hombre con el teléfono -->
+            <div class="flex-1 flex justify-center md:justify-end">
+                <img src="./img/banner.webp" alt="Hombre dando pulgar arriba" class="max-w-sm md:max-w-md">
             </div>
         </div>
     </section>
+    <!-- Situación real -->
+    <div class="mx-auto px-5 py-12 text-white" style="background-color: #161E2E;">
+        <h2 class="text-2xl text-center mb-6">Situación Real: Norway’s Ålfotbreen Glacier Melting Faster in Recent Summers</h2>
+        <div class="slim-comparison-container rounded-lg overflow-hidden relative" data-slim-params='{"position":"horizontal","startPosition":50}'>
+            <div class="slim-comparison-wrapper py-12">
+                <div class="slim-before-wrapper">
+                    <img src="./img/Alfotbreen before.webp" alt="Before" class="w-full h-auto object-cover" style="max-height: 600px;"/>
+                    <span class="slim-before-caption">Antes</span>
+                </div>
+                <div class="slim-after-wrapper">
+                    <img src="./img/Alfotbreen after.webp" alt="After" class="w-full h-auto object-cover" style="max-height: 600px;"/>
+                    <span class="slim-after-caption">Después</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Socios y Aliados -->
+    <div class="py-6" style="background-color: #F4FBF7;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl font-semibold text-center mb-6">Nuestros Partners y Aliados</h2>
+            <div class="flex flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-4 lg:space-x-8">
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-2 flex justify-center">
+                    <img src="./img/prisma.webp" alt="Prisma" class="max-h-20">
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-2 flex justify-center">
+                    <img src="./img/cima.webp" alt="CIMA" class="max-h-20">
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-2 flex justify-center">
+                    <img src="./img/ficus.webp" alt="FICUS" class="max-h-20">
+                </div>
+                <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 px-2 flex justify-center">
+                    <img src="./img/aider.webp" alt="AIDER" class="max-h-20">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Propósito -->
+    <div class="flex flex-wrap bg-white items-center">
+        <!-- Contenedor de Propósito -->
+        <div class="container w-full md:w-1/2 p-8">
+            <h1 class="text-2xl font-bold text-center mb-6">PROPÓSITO</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b" style="border-color: #FFFFFF; border-width: 2px;">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div style="background-color: #F4FBF7; padding: 8px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px;">
+                            <svg class="text-green-600 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-lg">01</span>
+                    </div>
+                    <p>Concientizar sobre la importancia del cuidado del medio ambiente y promover la acción responsable.</p>
+                </div>
+
+                <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b" style="border-color: #FFFFFF; border-width: 2px;">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div style="background-color: #F4FBF7; padding: 8px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px;">
+                            <svg class="text-green-600 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-lg">02</span>
+                    </div>
+                    <p>Ser una fuente confiable de información sobre temas ambientales y de sostenibilidad.</p>
+                </div>
+
+                <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b" style="border-color: #FFFFFF; border-width: 2px;">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div style="background-color: #F4FBF7; padding: 8px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px;">
+                            <svg class="text-green-600 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-lg">03</span>
+                    </div>
+                    <p>Contribuir al desarrollo sostenible mediante la educación y la inspiración, utilizando la tecnología como herramienta.</p>
+                </div>
+
+                <div class="p-4 rounded-bl-lg rounded-br-lg border-t-0 border-l border-r border-b" style="border-color: #FFFFFF; border-width: 2px;">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div style="background-color: #F4FBF7; padding: 8px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px;">
+                            <svg class="text-green-600 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="font-semibold text-lg">04</span>
+                    </div>
+                    <p>Fomentar prácticas sostenibles y respetuosas con el entorno.</p>
+                </div>
+        </div>
+    </div>
+        <!-- Contenedor de Imagen -->
+        <div class="w-full md:w-1/2">
+            <img src="./img/proposito.webp" alt="Imagen Propósito" class="w-full h-full object-cover">
+        </div>
+        
+    </div>
+    <!-- Blog de Noticias -->
+    <div class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6">BLOG DE NOTICIAS</h2>
+            <p class="text-center mb-10">Acá tendrás acceso directo a información relevante de Trujillo.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tarjeta 1 -->
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full" src="./img/Santuario Calipuy.webp" alt="Áreas Protegidas">
+                    <div class="p-5">
+                        <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
+                        <h5 class="text-xl font-bold mb-2">Conoce el Santuario Nacional de Calipuy a través de un recorrido virtual</h5>
+                        <p class="text-gray-700 mb-4">Los responsables del santuario publicaron un video para conocer y disfrutar la belleza natural de esta área protegida de La Libertad.</p>
+                        <a href="https://www.actualidadambiental.pe/conoce-el-santuario-nacional-de-calipuy-a-traves-de-un-recorrido-virtual/" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full" src="./img/Residuos solidos.webp" alt="Reciclaje y gestión de residuos">
+                    <div class="p-5">
+                        <h4 class="text-green-500 text-xm font-bold mb-2">Reciclaje y gestión de residuos</h4>
+                        <h5 class="text-xl font-bold mb-2">Trujillo: Nuevo espacio para residuos sólidos operará en setiembre</h5>
+                        <p class="text-gray-700 mb-4">La habilitación del nuevo espacio que será utilizado para la disposición de residuos sólidos de la ciudad de Trujillo, tiene un avance cercano al 70 % y podrá iniciar sus operaciones en setiembre de este año.</p>
+                        <a href="https://www.gob.pe/institucion/minam/noticias/936818-trujillo-espacio-para-depositar-residuos-solidos-que-implementa-el-minam-podra-operar-en-setiembre-de-este-ano" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                    </div>
+                </div>
+                <!-- Tarjeta 3-->
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full" src="./img/segat cuidado ambiental.webp" alt="Áreas Protegidas">
+                    <div class="p-5">
+                        <h4 class="text-green-500 text-xm font-bold mb-2">Cuidado ambiental</h4>
+                        <h5 class="text-xl font-bold mb-2">Segat impulsará la hora del planeta esta noche en Trujillo
+                        </h5>
+                        <p class="text-gray-700 mb-4">Esta iniciativa, que busca concienciar sobre la importancia de la conservación ambiental, se llevará a cabo el sábado 23 de marzo en los exteriores del Municipio de Trujillo a partir de las 7:00 p.m.</p>
+                        <a href="https://laindustria.pe/nota/24887-segat-impulsara-la-hora-del-planeta-esta-noche-en-trujillo#:~:text=Segat%20impulsará%20la%20hora%20del,%7C%20TRUJILLO%20%7C%20La%20Industria%20-%20Trujillo&text=Esta%20iniciativa%2C%20que%20busca%20concienciar,de%20las%207%3A00%20p.m." target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
      <!--CRUD Formulario-->
     <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full mx-auto">
@@ -238,7 +294,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ">
                 <!-- Logo y enlaces de política -->
                 <div>
-                    <img src="../img/logo.webp" alt="EcoConexion Logo" class="h-10">
+                    <img src="./img/logo.webp" alt="EcoConexion Logo" class="h-10">
                     <ul class="mt-4 space-y-2">
                         <li><a href="#" class="hover:text-gray-300">Políticas de Privacidad</a></li>
                         <li><a href="#" class="hover:text-gray-300">Términos y Condiciones</a></li>
@@ -248,9 +304,9 @@
                 <div>
                     <h2 class="text-lg font-semibold">Menu</h2>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="./situacionreal.html" class="hover:text-gray-300">Situación Real</a></li>
-                        <li><a href="./sobrenosotros.html" class="hover:text-gray-300">Sobre Nosotros</a></li>
-                        <li><a href="./noticias.html" class="hover:text-gray-300">Blog</a></li>
+                        <li><a href="./public/situacionreal.html" class="hover:text-gray-300">Situación Real</a></li>
+                        <li><a href="./public/sobrenosotros.html" class="hover:text-gray-300">Sobre Nosotros</a></li>
+                        <li><a href="./public/" class="hover:text-gray-300">Blog</a></li>
                     </ul>
                 </div>
                 <!-- Información de contacto -->
@@ -297,6 +353,17 @@
             });
         });
     </script>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    
+        document.getElementById('blog-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('blog-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
     <script src='https://dl.dropboxusercontent.com/s/oarqj5m8bgfsv53/slim-before-after.min.js'></script>
     <script type='text/javascript'>
 	var MyComparison = new slimBeforeAfter();
@@ -307,6 +374,6 @@
 	//use destroy method if you want to destroy plugin.
 	//MyComparison.destroy();
 
-</script>
+    </script>
 </body>
 </html>
