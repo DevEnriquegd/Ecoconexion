@@ -76,6 +76,15 @@
             </div>
         </div>
     </nav>
+    <!-- Menú desplegable para dispositivos móviles -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="./situacionreal.html" class="block px-4 py-2 text-green-600 hover:text-green-800">Situación Real</a>
+        <a href="./sobrenosotros.html" class="block px-4 py-2 hover:text-gray-700">Sobre Nosotros</a>
+        <a href="./noticias.html" class="block px-4 py-2 hover:text-gray-700">Blog</a>
+        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors" type="button">
+            Contáctanos
+        </button>
+    </div>
     <!--Situación real-->
     <div class=" mx-auto px-5 py-12 text-white" style="background-color: #161E2E;"> <!-- Centrado, padding y color de fondo y texto -->
         <h2 class="text-2xl text-center mb-6">Situación Real: Norway’s Ålfotbreen Glacier Melting Faster in Recent Summers</h2>
@@ -257,6 +266,17 @@
                     blogMenu.classList.add('hidden');
                 }
             });
+        });
+    </script>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    
+        document.getElementById('blog-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('blog-menu');
+            menu.classList.toggle('hidden');
         });
     </script>
     <script src='https://dl.dropboxusercontent.com/s/oarqj5m8bgfsv53/slim-before-after.min.js'></script>

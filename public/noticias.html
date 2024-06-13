@@ -76,6 +76,15 @@
             </div>
         </div>
     </nav>
+    <!-- Menú desplegable para dispositivos móviles -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="./situacionreal.html" class="block px-4 py-2 text-green-600 hover:text-green-800">Situación Real</a>
+        <a href="./sobrenosotros.html" class="block px-4 py-2 hover:text-gray-700">Sobre Nosotros</a>
+        <a href="./noticias.html" class="block px-4 py-2 hover:text-gray-700">Blog</a>
+        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors" type="button">
+            Contáctanos
+        </button>
+    </div>
     <!--Banner-->
     <section class="py-10" style="background-color: #161E2E;">
         <div class="container mx-auto flex flex-col md:flex-row items-center px-5">
@@ -93,45 +102,82 @@
         </div>
     </section>
     <!-- Blog de Noticias -->
-    <div class="py-8">
+    <div class="container mx-auto px-4 py-8">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-6">BLOG DE NOTICIAS</h2>
             <p class="text-center mb-10">Acá tendrás acceso directo a información relevante de Trujillo.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Tarjeta 1 -->
-                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full" src="../img/Santuario Calipuy.webp" alt="Áreas Protegidas">
-                    <div class="p-5">
-                        <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
-                        <h5 class="text-xl font-bold mb-2">Conoce el Santuario Nacional de Calipuy a través de un recorrido virtual</h5>
-                        <p class="text-gray-700 mb-4">Los responsables del santuario publicaron un video para conocer y disfrutar la belleza natural de esta área protegida de La Libertad.</p>
-                        <a href="https://www.actualidadambiental.pe/conoce-el-santuario-nacional-de-calipuy-a-traves-de-un-recorrido-virtual/" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
-                    </div>
+        </div>
+        <div class="flex flex-wrap justify-center mb-6 space-y-2 md:space-y-0">
+            <button class="filter-btn bg-green-500 text-white px-4 py-2 rounded-lg mx-2 w-full md:w-auto" data-category="all">Todos</button>
+            <button class="filter-btn bg-green-500 text-white px-4 py-2 rounded-lg mx-2 w-full md:w-auto" data-category="Áreas protegidas">Áreas protegidas</button>
+            <button class="filter-btn bg-green-500 text-white px-4 py-2 rounded-lg mx-2 w-full md:w-auto" data-category="Reciclaje y gestión de residuos">Reciclaje y gestión de residuos</button>
+            <button class="filter-btn bg-green-500 text-white px-4 py-2 rounded-lg mx-2 w-full md:w-auto" data-category="Cuidado ambiental">Cuidado ambiental</button>
+            <button id="reset-btn" class="bg-red-500 text-white px-4 py-2 rounded-lg mx-2 w-full md:w-auto">Restablecer filtros</button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Tarjeta 1 -->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-category="Áreas protegidas">
+                <img class="w-full" src="../img/Santuario Calipuy.webp" alt="Áreas Protegidas">
+                <div class="p-5">
+                    <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
+                    <h5 class="text-xl font-bold mb-2">Conoce el Santuario Nacional de Calipuy a través de un recorrido virtual</h5>
+                    <p class="text-gray-700 mb-4">Los responsables del santuario publicaron un video para conocer y disfrutar la belleza natural de esta área protegida de La Libertad.</p>
+                    <a href="https://www.actualidadambiental.pe/conoce-el-santuario-nacional-de-calipuy-a-traves-de-un-recorrido-virtual/" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
                 </div>
-                <!-- Tarjeta 2 -->
-                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full" src="../img/Residuos solidos.webp" alt="Reciclaje y gestión de residuos">
-                    <div class="p-5">
-                        <h4 class="text-green-500 text-xm font-bold mb-2">Reciclaje y gestión de residuos</h4>
-                        <h5 class="text-xl font-bold mb-2">Trujillo: Nuevo espacio para residuos sólidos operará en setiembre</h5>
-                        <p class="text-gray-700 mb-4">La habilitación del nuevo espacio que será utilizado para la disposición de residuos sólidos de la ciudad de Trujillo, tiene un avance cercano al 70 % y podrá iniciar sus operaciones en setiembre de este año.</p>
-                        <a href="https://www.gob.pe/institucion/minam/noticias/936818-trujillo-espacio-para-depositar-residuos-solidos-que-implementa-el-minam-podra-operar-en-setiembre-de-este-ano" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
-                    </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-category="Reciclaje y gestión de residuos">
+                <img class="w-full" src="../img/Residuos solidos.webp" alt="Reciclaje y gestión de residuos">
+                <div class="p-5">
+                    <h4 class="text-green-500 text-xm font-bold mb-2">Reciclaje y gestión de residuos</h5>
+                    <h5 class="text-xl font-bold mb-2">Trujillo: Nuevo espacio para residuos sólidos operará en setiembre</h5>
+                    <p class="text-gray-700 mb-4">La habilitación del nuevo espacio que será utilizado para la disposición de residuos sólidos de la ciudad de Trujillo, tiene un avance cercano al 70 % y podrá iniciar sus operaciones en setiembre de este año.</p>
+                    <a href="https://www.gob.pe/institucion/minam/noticias/936818-trujillo-espacio-para-depositar-residuos-solidos-que-implementa-el-minam-podra-operar-en-setiembre-de-este-ano" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
                 </div>
-                <!-- Tarjeta 3-->
-                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img class="w-full" src="../img/segat cuidado ambiental.webp" alt="Áreas Protegidas">
-                    <div class="p-5">
-                        <h4 class="text-green-500 text-xm font-bold mb-2">Cuidado ambiental</h4>
-                        <h5 class="text-xl font-bold mb-2">Segat impulsará la hora del planeta esta noche en Trujillo
-                        </h5>
-                        <p class="text-gray-700 mb-4">Esta iniciativa, que busca concienciar sobre la importancia de la conservación ambiental, se llevará a cabo el sábado 23 de marzo en los exteriores del Municipio de Trujillo a partir de las 7:00 p.m.</p>
-                        <a href="https://laindustria.pe/nota/24887-segat-impulsara-la-hora-del-planeta-esta-noche-en-trujillo#:~:text=Segat%20impulsará%20la%20hora%20del,%7C%20TRUJILLO%20%7C%20La%20Industria%20-%20Trujillo&text=Esta%20iniciativa%2C%20que%20busca%20concienciar,de%20las%207%3A00%20p.m." target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
-                    </div>
+            </div>
+            <!-- Tarjeta 3-->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-category="Cuidado ambiental">
+                <img class="w-full" src="../img/segat cuidado ambiental.webp" alt="Cuidado ambiental">
+                <div class="p-5">
+                    <h4 class="text-green-500 text-xm font-bold mb-2">Cuidado ambiental</h4>
+                    <h5 class="text-xl font-bold mb-2">Segat impulsará la hora del planeta esta noche en Trujillo</h5>
+                    <p class="text-gray-700 mb-4">Esta iniciativa, que busca concienciar sobre la importancia de la conservación ambiental, se llevará a cabo el sábado 23 de marzo en los exteriores del Municipio de Trujillo a partir de las 7:00 p.m.</p>
+                    <a href="https://laindustria.pe/nota/24887-segat-impulsara-la-hora-del-planeta-esta-noche-en-trujillo#:~:text=Segat%20impulsará%20la%20hora%20del,%7C%20TRUJILLO%20%7C%20La%20Industria%20-%20Trujillo&text=Esta%20iniciativa%2C%20que%20busca%20concienciar,de%20las%207%3A00%20p.m." target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-category="Áreas protegidas">
+                <img class="w-full" src="../img/Reserva comunal.jpg" alt="Áreas Protegidas">
+                <div class="p-5">
+                    <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
+                    <h5 class="text-xl font-bold mb-2">Amazonas impulsa la creación de la Reserva Comunal Ajutap con apoyo de MINAM, SERNANP e indígenas</h5>
+                    <p class="text-gray-700 mb-4">El Ministerio del Ambiente (MINAM), el Servicio Nacional de Áreas Naturales Protegidas (SERNANP) y las comunidades indígenas de Amazonas colaboran para establecer la Reserva Comunal Ajutap.</p>
+                    <a href="https://andina.pe/agencia/noticia-amazonas-minam-sernanp-e-indigenas-impulsan-creacion-reserva-comunal-ajutap-989141.aspx" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-category="Áreas protegidas">
+                <img class="w-full" src="../img/Alerta ambiental.webp" alt="Áreas Protegidas">
+                <div class="p-5">
+                    <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
+                    <h5 class="text-xl font-bold mb-2">Alerta ambiental: La expansión de cultivos ilegales de coca causa el 64% de la pérdida de bosques en Perú</h5>
+                    <p class="text-gray-700 mb-4">Un reciente informe destaca que el 64% de la deforestación en Perú está vinculada a la expansión de cultivos ilegales de hoja de coca. Esta alarmante tendencia contribuye significativamente a la pérdida de bosques, afectando la biodiversidad y exacerbando problemas ambientales en la región.</p>
+                    <a href="https://www.infobae.com/peru/2024/06/11/alerta-ambiental-64-de-la-perdida-de-bosques-en-peru-esta-relacionada-con-la-expansion-de-cultivos-ilegales-de-hoja-de-coca/" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden" data-category="Áreas protegidas">
+                <img class="w-full" src="../img/Compra de boletos.webp" alt="Áreas Protegidas">
+                <div class="p-5">
+                    <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
+                    <h5 class="text-xl font-bold mb-2">Compra de boletos para ingresar a áreas naturales protegidas en Perú ahora disponible en línea</h5>
+                    <p class="text-gray-700 mb-4">Los visitantes ahora pueden adquirir boletos para ingresar a las áreas naturales protegidas de Perú de manera virtual. Esta iniciativa facilita el acceso a estos espacios, promoviendo el turismo responsable y la conservación del medio ambiente.</p>
+                    <a href="https://www.actualidadambiental.pe/boletos-para-ingresar-a-areas-naturales-protegidas-ahora-se-pueden-comprar-de-forma-virtual/" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
      <!--CRUD Formulario-->
     <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full mx-auto">
@@ -220,6 +266,34 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const newsCards = document.querySelectorAll('[data-category]');
+    const resetButton = document.getElementById('reset-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const category = button.getAttribute('data-category');
+
+            newsCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    resetButton.addEventListener('click', function () {
+        newsCards.forEach(card => {
+            card.classList.remove('hidden');
+        });
+    });
+});
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             const modalToggleButtons = document.querySelectorAll('[data-modal-toggle]');
             modalToggleButtons.forEach(button => {
                 button.addEventListener('click', function () {
@@ -243,6 +317,17 @@
                     blogMenu.classList.add('hidden');
                 }
             });
+        });
+    </script>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    
+        document.getElementById('blog-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('blog-menu');
+            menu.classList.toggle('hidden');
         });
     </script>
     <script src='https://dl.dropboxusercontent.com/s/oarqj5m8bgfsv53/slim-before-after.min.js'></script>
