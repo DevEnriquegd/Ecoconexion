@@ -1,6 +1,6 @@
 # EcoConexión: Sitio web para conectarte con el cuidado del planeta
 
-![EcoConexión Logo](https://cdn.discordapp.com/attachments/1158973088046796820/1243207659293905037/image.png?ex=6650a2db&is=664f515b&hm=685ca7a52026a08b6ce996e997ba95e9ee66bd113dc9390a7fb505ac8b492447&)
+![EcoConexión Logo](https://cdn.discordapp.com/attachments/1228714762179711016/1250806995607355402/logo.webp?ex=666c484a&is=666af6ca&hm=8e2c887755ddd5870b2946ce640630cb9a77993f4226bbfde1b6862681e61130&)
 
 ## Descripción
 
