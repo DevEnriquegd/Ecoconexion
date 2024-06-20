@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href='https://dl.dropboxusercontent.com/s/etuma8df6awlf4r/slim-before-after.min.css' rel='stylesheet'/>
+    <link rel="icon" href="../img/logo.webp">
+    <link rel="stylesheet" href="../src/style.css">
+    <!-- Preconexión a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fuente Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>EcoConexion</title>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navegación -->
+    <nav class="bg-white px-5 py-3 shadow-md">
+        <div class="mx-auto flex justify-between items-center"> <!--Le quité la clase container-->
+            <a href="../index.html" class="flex items-center">
+                <img src="../img/logo.webp" alt="EcoConexion Logo" class="h-10">
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-green-600 p-2 focus:outline-none">
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <div id="menu" class="hidden md:flex md:items-center md:space-x-4">
+                <a href="./situacionreal.html" class="text-green-600 hover:text-green-800">Situación Real</a>
+                <a href="./sobrenosotros.html" class="hover:text-gray-700">Sobre Nosotros</a>
+                <div class="relative">
+                    <button id="blog-menu-button" class="text-gray-700 hover:text-green-600 flex items-center">
+                        Blog
+                        <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div id="blog-menu" class="absolute hidden bg-white shadow-lg z-10 w64 mt-2 p-4 rounded-lg" style="width: 24rem;">
+                        <a href="./noticias.html" class="dropdown-item">
+                            <img src="../img/icon1.png" alt="Áreas Protegidas" class="dropdown-icon">
+                            <div class="dropdown-text">
+                                <span class="dropdown-title">Áreas Protegidas</span>
+                                <span class="dropdown-description"><strong>Información acerca</strong> </span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 ml-auto text-green-600">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="./noticias.html" class="dropdown-item">
+                            <img src="../img/icon2.png" alt="Reciclaje y Gestión de Residuos" class="dropdown-icon">
+                            <div class="dropdown-text">
+                                <span class="dropdown-title">Reciclaje y Gestión de Residuos</span>
+                                <span class="dropdown-description"><strong>Propuestas y Proyectos</strong></span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 ml-auto text-green-600">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="./noticias.html" class="dropdown-item">
+                            <img src="../img/icon3.png" alt="Cuidado Ambiental" class="dropdown-icon">
+                            <div class="dropdown-text">
+                                <span class="dropdown-title">Cuidado Ambiental</span>
+                                <span class="dropdown-description"><strong>TODO</strong></span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 ml-auto text-green-600">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Botón para abrir el modal -->
+                <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="inline-block bg-green-500 text-white px-8 py-3 rounded hover:bg-green-600 transition-colors" type="button">
+                    Contáctanos
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Menú desplegable para dispositivos móviles -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <a href="./situacionreal.html" class="block px-4 py-2 text-green-600 hover:text-green-800">Situación Real</a>
+        <a href="./sobrenosotros.html" class="block px-4 py-2 hover:text-gray-700">Sobre Nosotros</a>
+        <a href="./noticias.html" class="block px-4 py-2 hover:text-gray-700">Blog</a>
+        <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors" type="button">
+            Contáctanos
+        </button>
+    </div>
+    <!--Banner-->
+    <section class="py-8 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                    <h4 class="text-green-600 text-sm font-bold mb-2">Áreas Protegidas</h4>
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-2">Conoce el Santuario Nacional de Calipuy a través de un recorrido virtual</h2>
+                    <p class="text-gray-600 mb-4">Viernes 2 de Octubre, 2020</p>
+                </div>
+                <img src="../img/Santuario Calipuy.webp" alt="Conoce el Santuario Nacional de Calipuy" class="w-full object-cover h-48 sm:h-64 md:h-80 lg:h-96">
+            </div>
+        </div>
+    </section>
+    <section class="py-8 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-700 mb-4">
+                    <strong>Foto: Sernap</strong>
+                    <br>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            Los responsables del santuario publicaron un video para conocer y disfrutar la belleza natural de esta área natural protegida de La Libertad.
+                        </li>
+                    </ul>
+                </p>
+                <br>
+                <p class="text-gray-700 mb-4">
+                    El Santuario Nacional de Calipuy (SNC) está ubicado en la provincia de Santiago de Chuco, en el departamento de La Libertad. Su extensión de 4500 hectáreas permite conservar a la puya Raimondi, así como las cuencas hidrográficas de los ríos Huamanzaña y Chorobal.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    El SNC, al igual que otras áreas protegidas y demás destinos turísticos, tuvo que cerrar sus puertas al público debido a la emergencia sanitaria declarada para luchar contra la propagación del COVID-19. Sin embargo, ahora se prepara para volver a recibir a los visitantes, y por ello ha publicado un recorrido virtual.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    Se trata de una serie de videos donde el público puede conocer el paisaje, las especies de flora y fauna, y otras maravillas de como el rodal más extenso de la puya Raimondi.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    El video muestra la ruta de la Vizcacha y la ruta del Mirador de la puya Raimondi, dos de los cuatro circuitos turísticos planificados para que los turistas puedan conocer.
+                </p>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Blog de Noticias -->
+    <div class="py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-left mb-6 text-green-500">Otras noticias</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tarjeta 1 -->
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full" src="../img/Santuario Calipuy.webp" alt="Áreas Protegidas">
+                    <div class="p-5">
+                        <h4 class="text-green-500 text-xm font-bold mb-2">Áreas protegidas</h4>
+                        <h5 class="text-xl font-bold mb-2">Conoce el Santuario Nacional de Calipuy a través de un recorrido virtual</h5>
+                        <p class="text-gray-700 mb-4">Los responsables del santuario publicaron un video para conocer y disfrutar la belleza natural de esta área protegida de La Libertad.</p>
+                        <a href="./noticias_santuario.html" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full" src="../img/Residuos solidos.webp" alt="Reciclaje y gestión de residuos">
+                    <div class="p-5">
+                        <h4 class="text-green-500 text-xm font-bold mb-2">Reciclaje y gestión de residuos</h4>
+                        <h5 class="text-xl font-bold mb-2">Trujillo: Nuevo espacio para residuos sólidos operará en setiembre</h5>
+                        <p class="text-gray-700 mb-4">La habilitación del nuevo espacio que será utilizado para la disposición de residuos sólidos de la ciudad de Trujillo, tiene un avance cercano al 70 % y podrá iniciar sus operaciones en setiembre de este año.</p>
+                        <a href="https://www.gob.pe/institucion/minam/noticias/936818-trujillo-espacio-para-depositar-residuos-solidos-que-implementa-el-minam-podra-operar-en-setiembre-de-este-ano" target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                    </div>
+                </div>
+                <!-- Tarjeta 3-->
+                <div class="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="w-full" src="../img/segat cuidado ambiental.webp" alt="Áreas Protegidas">
+                    <div class="p-5">
+                        <h4 class="text-green-500 text-xm font-bold mb-2">Cuidado ambiental</h4>
+                        <h5 class="text-xl font-bold mb-2">Segat impulsará la hora del planeta esta noche en Trujillo
+                        </h5>
+                        <p class="text-gray-700 mb-4">Esta iniciativa, que busca concienciar sobre la importancia de la conservación ambiental, se llevará a cabo el sábado 23 de marzo en los exteriores del Municipio de Trujillo a partir de las 7:00 p.m.</p>
+                        <a href="https://laindustria.pe/nota/24887-segat-impulsara-la-hora-del-planeta-esta-noche-en-trujillo#:~:text=Segat%20impulsará%20la%20hora%20del,%7C%20TRUJILLO%20%7C%20La%20Industria%20-%20Trujillo&text=Esta%20iniciativa%2C%20que%20busca%20concienciar,de%20las%207%3A00%20p.m." target="_blank" class="text-white bg-green-500 hover:bg-green-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">Descubre más </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--CRUD Formulario-->
+    <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full mx-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                        Contáctanos
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <form action="https://formspree.io/f/mdoqqdvb" method="post" class="p-4 md:p-5">
+                    <div class="grid gap-4 mb-4 grid-cols-2">
+                        <div class="col-span-1">
+                            <label for="nombre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombres*</label>
+                            <input type="text" name="Nombre" id="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Escribe tu nombre" required>
+                        </div>
+                        <div class="col-span-1">
+                            <label for="apellido" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos*</label>
+                            <input type="text" name="Apellido" id="apellido" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Escribe tu apellido" required>
+                        </div>
+                        <div class="col-span-1">
+                            <label for="telefono" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono*</label>
+                            <input type="tel" name="Teléfono" id="telefono" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Escribe tu teléfono" required>
+                        </div>
+                        <div class="col-span-1">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo*</label>
+                            <input type="email" name="Email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Escribe tu correo" required>
+                        </div>
+                        <div class="col-span-2">
+                            <label for="mensaje" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mensaje</label>
+                            <textarea name="Mensaje" id="mensaje" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe tu mensaje aquí"></textarea>                    
+                        </div>
+                    </div>
+                    <button type="submit" class="inline-block bg-green-500 text-white px-8 py-3 rounded hover:bg-green-600 transition-colors">
+                        Manténme Informado
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer class="text-white"  style="background: #161E2E;">
+        <div class="container mx-auto py-8 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ">
+                <!-- Logo y enlaces de política -->
+                <div>
+                    <img src="../img/logo.webp" alt="EcoConexion Logo" class="h-10">
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Políticas de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+                <!-- Enlaces del menú -->
+                <div>
+                    <h2 class="text-lg font-semibold">Menu</h2>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="./situacionreal.html" class="hover:text-gray-300">Situación Real</a></li>
+                        <li><a href="./sobrenosotros.html" class="hover:text-gray-300">Sobre Nosotros</a></li>
+                        <li><a href="./noticias.html" class="hover:text-gray-300">Blog</a></li>
+                    </ul>
+                </div>
+                <!-- Información de contacto -->
+                <div>
+                    <h2 class="text-lg font-semibold">Contact</h2>
+                    <ul class="mt-4 space-y-2">
+                        <li><span class="font-semibold">Teléfono:</span> +51 999 999 999</li>
+                        <li><span class="font-semibold">Email:</span> ecoconexion@company.com</li>
+                    </ul>
+                </div>
+                <!-- Iconos de redes sociales -->
+                <div class="flex space-x-4 mt-4">
+                    <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#00B871"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#00B871"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#00B871"></path> </g></svg>
+                    <svg class="h-8 w-8" fill="#00B871" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"></path></g></svg>
+                    <svg class="h-8 w-8" viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="##00B871" stroke="##00B871"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>twitter [#154]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#00B871"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705" id="twitter-[#154]"> </path> </g> </g> </g> </g></svg>                
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Modal toggle
+            const modalToggleButtons = document.querySelectorAll('[data-modal-toggle]');
+            modalToggleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const modalId = button.getAttribute('data-modal-toggle');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.classList.toggle('hidden');
+                    }
+                });
+            });
+    
+            // Blog menu toggle
+            const blogMenuButton = document.getElementById('blog-menu-button');
+            const blogMenu = document.getElementById('blog-menu');
+            
+            blogMenuButton.addEventListener('click', function (e) {
+                e.stopPropagation();
+                blogMenu.classList.toggle('hidden');
+            });
+    
+            window.addEventListener('click', function (e) {
+                if (!blogMenuButton.contains(e.target) && !blogMenu.contains(e.target)) {
+                    blogMenu.classList.add('hidden');
+                }
+            });
+    
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+    
+            // Filter buttons functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('[data-category]');
+            const resetButton = document.getElementById('reset-btn');
+    
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = button.getAttribute('data-category');
+    
+                    newsCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+    
+            resetButton.addEventListener('click', function () {
+                newsCards.forEach(card => {
+                    card.classList.remove('hidden');
+                });
+            });
+    
+            // Initialize slimBeforeAfter plugin
+            var MyComparison = new slimBeforeAfter();
+            // MyComparison.refresh(); // Use refresh method for dynamically created elements.
+            // MyComparison.destroy(); // Use destroy method if you want to destroy plugin.
+        });
+    </script>
+    <script src='https://dl.dropboxusercontent.com/s/oarqj5m8bgfsv53/slim-before-after.min.js'></script>    
+</body>
+</html>
